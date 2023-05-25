@@ -1,0 +1,1 @@
+seminars and homework by Python
