@@ -4,30 +4,30 @@
 # чтобы все монетки были повернуты вверх одной и той же стороной.
 # Выведите минимальное количество монет, которые нужно перевернуть
 
-import random
+# import random
 
-from random import randint
+# from random import randint
 
-amount_coin = int(input('Введите количество монет: '))
+# amount_coin = int(input('Введите количество монет: '))
 
-m = 0
-k = 0
-coins = [0, 1]
-for i in range(amount_coin):
-    random.shuffle(coins)
-    print(f'Все монеты {coins}')
-    if int(coins[0]) == 0:
-        k += 1
-    if int(coins[0]) == 1:
-        m += 1
-print(f'Всего монет {m, k}')
+# m = 0
+# k = 0
+# coins = [0, 1]
+# for i in range(amount_coin):
+#     random.shuffle(coins)
+#     print(f'Все монеты {coins}')
+#     if int(coins[0]) == 0:
+#         k += 1
+#     if int(coins[0]) == 1:
+#         m += 1
+# print(f'Всего монет {m, k}')
 
-if m > k:
-    ans = k
-else:
-    ans = m
+# if m > k:
+#     ans = k
+# else:
+#     ans = m
 
-print(f'Минимальное количество монет, которые нужно перевернуть {ans}.')
+# print(f'Минимальное количество монет, которые нужно перевернуть {ans}.')
 
 
 ###############################################################################
@@ -51,10 +51,10 @@ print(f'Числа задуманные Петей {X, Y}.')
 # Задача 3.
 # Требуется вывести все целые степени двойки (т.е. числа вида 2k), не превосходящие числа N.
 
-N = int(input('Введите целое число больше 1: '))
-k = 1
-while k <= N:
-    print(k,end=' ')
-    k = k * 2
+# N = int(input('Введите целое число больше 1: '))
+# k = 1
+# while k <= N:
+#     print(k, end=' ')
+#     k = k * 2
 
     

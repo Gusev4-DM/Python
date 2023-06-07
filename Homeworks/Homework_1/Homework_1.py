@@ -1,15 +1,15 @@
 # Задача 1. Найдите сумму цифр трехзначного числа.
 
-# number = (int(input('Введите трехзначное число ')))
+number = (int(input('Введите трехзначное число ')))
 
-# if number > 999 or number < 0:
-#     print('Введите корректное число')
-# else:
-#     number_1 = number // 100
-#     number_2 = number % 100 // 10
-#     number_3 = number % 100 % 10
-#     sum_number = number_1 + number_2 + number_3
-#     print(f'Сумма трех чисел равна {sum_number}')
+if number > 999 or number < 0:
+    print('Введите корректное число')
+else:
+    number_1 = number // 100
+    number_2 = number % 100 // 10
+    number_3 = number % 100 % 10
+    sum_number = number_1 + number_2 + number_3
+    print(f'Сумма трех чисел равна {sum_number}')
 
 ###############################################################################
 
@@ -17,13 +17,13 @@
 # Сколько журавликов сделал каждый ребенок, если известно, что Петя и Сережа сделали одинаковое количество журавликов.
 # А Катя сделала в два раза больше журавликов, чем Петя и Сережа вместе?
 
-# summ = int(input('Введите общее число журавликов '))
+summ = int(input('Введите общее число журавликов '))
 
-# petya = int(summ / 6)
-# sereja = int(summ / 6)
-# katya = int(summ / 6 * 4)
+petya = int(summ / 6)
+sereja = int(summ / 6)
+katya = int(summ / 6 * 4)
 
-# print(f'Петя сделал - {petya} журавликов, Сережа - {sereja}, а Катя - {katya}.')
+print(f'Петя сделал - {petya} журавликов, Сережа - {sereja}, а Катя - {katya}.')
 
 ###############################################################################
 
@@ -31,36 +31,36 @@
 # Счастливым билетом называют такой билет с шестизначным номером, где сумма первых трех цифр равна сумме последних трех.
 # Т.е. билет с номером 385916 – счастливый, т.к. 3+8+5=9+1+6. Вам требуется написать программу, которая проверяет счастливость билета.
 
-# number = int(input('Введите шестизначное число '))
+number = int(input('Введите шестизначное число '))
 
-# if number > 999999 or number < 0:
-#     print('Введите корректное число')
-# else:
-#     number_one = number % 1000
-#     number_two = number // 1000
+if number > 999999 or number < 0:
+    print('Введите корректное число')
+else:
+    number_one = number % 1000
+    number_two = number // 1000
 
-#     number_1 = number_one // 100
-#     number_2 = number_one % 100 // 10
-#     number_3 = number_one % 100 % 10
-#     sum_number_one = number_1 + number_2 + number_3
+    number_1 = number_one // 100
+    number_2 = number_one % 100 // 10
+    number_3 = number_one % 100 % 10
+    sum_number_one = number_1 + number_2 + number_3
 
-#     number_3 = number_two // 100
-#     number_4 = number_two % 100 // 10
-#     number_5 = number_two % 100 % 10
-#     sum_number_two = number_3 + number_4 + number_5
+    number_3 = number_two // 100
+    number_4 = number_two % 100 // 10
+    number_5 = number_two % 100 % 10
+    sum_number_two = number_3 + number_4 + number_5
 
-#     if sum_number_one == sum_number_two:
-#         print('Это счастливый билет')
-#     elif sum_number_one != sum_number_two:
-#         print('Это не счастливый билет')
+    if sum_number_one == sum_number_two:
+        print('Это счастливый билет')
+    elif sum_number_one != sum_number_two:
+        print('Это не счастливый билет')
 
 # Задача 8: Требуется определить, можно ли от шоколадки размером n × m долек отломить k долек. 
 # Если разрешается сделать один разлом по прямой между дольками (то есть разломить шоколадку на два прямоугольника).
 
-# n = int(input('Введите первое число '))
-# m = int(input('Введите второе число '))
-# k = int(input('Введите третье число '))
-# if k < n * m and ((k % n == 0) or (k % m == 0)):
-#     print('YES')
-# else:
-#     print('NO')
+n = int(input('Введите первое число '))
+m = int(input('Введите второе число '))
+k = int(input('Введите третье число '))
+if k < n * m and ((k % n == 0) or (k % m == 0)):
+    print('YES')
+else:
+    print('NO')
