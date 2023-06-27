@@ -55,24 +55,24 @@ import random
 Заменить максимальное на минимальное значение в списке. input 5 -> 1 2 3 4 5. output -> 1 2 3 4 1
 '''
 
-# numbers = list(random.randint(1, 10) for _ in range(10))
-# print(numbers)
-# numbers[numbers.index(max(numbers))], numbers[numbers.index(min(numbers))] = numbers[numbers.index(min(numbers))], numbers[numbers.index(max(numbers))]
-# print(numbers)
+numbers = list(random.randint(1, 10) for _ in range(10))
+print(numbers)
+numbers[numbers.index(max(numbers))], numbers[numbers.index(min(numbers))] = numbers[numbers.index(min(numbers))], numbers[numbers.index(max(numbers))]
+print(numbers)
 
-# numb = [int(x) for x in input().split()]
-# print(numb)
-# max_n = max(numb)
-# for i in range(len(numb)):
-#     if numb[i] == max_n:
-#         numb[i] = min(numb)
+numb = [int(x) for x in input().split()]
+print(numb)
+max_n = max(numb)
+for i in range(len(numb)):
+    if numb[i] == max_n:
+        numb[i] = min(numb)
 
-# print(*numb)
+print(*numb)
 
-# lst = [int(i) for i in '1 3 3 3 4'.split()]
-# mx, mn = max(lst), min(lst)
-# lst_str = [str(i) for i in lst]
-# print(' '.join(lst_str).relace(str(mx), str(mn)))
+lst = [int(i) for i in '1 3 3 3 4'.split()]
+mx, mn = max(lst), min(lst)
+lst_str = [str(i) for i in lst]
+print(' '.join(lst_str).relace(str(mx), str(mn)))
 
 '''Задача 3.
 Написать программу которая принимает одно число и проверяет, является ли оно простым
