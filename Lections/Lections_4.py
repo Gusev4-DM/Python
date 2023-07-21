@@ -92,19 +92,19 @@ print(data)
 
 # ///////////////////////////////////////////////// Работа с файлами /////////////////////////////////////////////////////////////////////
 
-'''
+
 colors = ['red', 'green', 'blue']
-data = open('file.txt', 'w') # Здесь указываем режии в котором будем работать.
+data = open('file.txt', 'w') # Здесь указываем режим в котором будем работать.
 data.writelines(colors) # Разделителей не будет
 data.close()
-'''
 
-'''
+
+
 with open('file.txt', 'w') as data:
     data.write('line 1\n')
     data.write('line 2\n')
 
-'''
+
 
 path = 'file.txt'
 data = open('file.txt', 'r')

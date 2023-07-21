@@ -25,6 +25,23 @@ def words(word):
 list_words = input().replace('-', '').split()
 print(('Пам парам', 'Парам пам-пам',)[len(set(map(words, list_words))) <= 1])
 
+#############################################################################################
+
+def count_vowels(text: str) -> int:
+    vowels = 'аеёиоуыэюя'
+    count = 0
+    for i in text.lower():
+        if i in vowels:
+            count += 1
+    return count
+
+
+result = list(map(lambda s: count_vowels(s), input('Введите слова: ').split()))
+
+if len(set(result)) == 1:
+    print('Парам пам-пам')
+else:
+    print('Пам парам')
 
 '''
 Задача 2.
