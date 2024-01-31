@@ -7,12 +7,22 @@
 '''
 
 import decimal
-from math import pi
+import math
 
 def area(d):
     decimal.getcontext().prec = 42
-    return decimal.Decimal(pi * (d / 2) ** 2)
+    pi = decimal.Decimal(str(math.pi))
+    d = decimal.Decimal(str(d))
+    return pi * (d / 2) ** 2
 
-d = int(input('Введите диаметр: '))
+print(area(1234.123241235412))
 
-print(area(d))
+
+def len_circle(d):
+    decimal.getcontext().prec = 42
+    pi = decimal.Decimal(str(math.pi))
+    d = decimal.Decimal(str(d))
+    return pi * d
+
+print(len_circle(1234.123241235412))
+
