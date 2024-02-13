@@ -12,3 +12,4 @@ max_l = len(max(my_str, key=len))
 
 for i, el in enumerate(sorted(my_str), 1):
     print(f'{i}. {el:>{max_l}}')
+
