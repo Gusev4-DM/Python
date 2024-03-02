@@ -10,4 +10,3 @@ generator = (i for i in range(0, 101, 2) if sum([int(el) for el in str(i)]) != 8
 for i in generator:
     print(i)
 
-
