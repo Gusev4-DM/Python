@@ -165,3 +165,57 @@ print(z)
 from mathematical import base_math as bm
 from mathematical.advanced_math import exp
 
+
+'''Модуль sys'''
+
+'''
+Модуль sys обеспечивает доступ к некоторым переменным, используемым или
+поддерживаемым интерпретатором, а также к функциям, тесно
+взаимодействующим с интерпретатором
+'''
+
+# Например создадим файл script.py со следующим кодом
+print('start')
+print('stop')
+
+# Открываем консоль операционный системы и вводим команду на запуск.
+python3 script.py
+
+# Скрипт вывел текст в консоль и завершил работу. Научим его принимать значения из командной строки.
+from sys import argv
+print('start')
+print(argv)
+print('stop')
+
+'''Переменная argv содержит список. В нулевой ячейке имя запускаемого скрипта. В последующих ячейках переданные значения.'''
+
+# Например при запуске следующей строки:
+python script.py -d 42 -s "Hello world!" -k 100
+
+# Получим следующий список:
+['script.py', '-d', '42', '-s', 'Hello world!', '-k', '100']
+
+
+'''Модуль random'''
+
+START = -100
+STOP = 1_000
+STEP = 10
+data = [2, 4, 6, 8, 42, 73]
+
+print(rnd.random())
+rnd.seed(42)
+state = rnd.getstate()
+print(rnd.random())
+rnd.setstate(state)
+print(rnd.random())
+print(rnd.randint(START, STOP))
+print(rnd.uniform(START, STOP))
+print(rnd.choice(data))
+print(rnd.randrange(START, STOP, STEP))
+
+print(data)
+rnd.shuffle(data)
+print(data)
+print(rnd.sample(data, 2))
+print(rnd.sample(data, 2, counts=[1, 1, 1, 1, 1, 100]))
