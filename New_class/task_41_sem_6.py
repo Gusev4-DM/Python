@@ -13,7 +13,7 @@
 выражение.
 '''
 
-_some_dict_ = {}
+_some_dict = {}
 
 def some_func_3(qws, count):
     true_answer = 'в правде'
@@ -21,12 +21,12 @@ def some_func_3(qws, count):
     while tries < count:
         user_answer = input('Напишите ответ: ')
         if true_answer == user_answer:
-            _some_dict_[tries + 1] = 'Вы угадали'
+            _some_dict[tries + 1] = 'Вы угадали'
             return
         else:
-            _some_dict_[tries + 1] = 'Вы не угадали'
+            _some_dict[tries + 1] = 'Вы не угадали'
             tries += 1
 
 
 some_func_3("В чем сила:", 3)
-print(_some_dict_)
+print(_some_dict)
