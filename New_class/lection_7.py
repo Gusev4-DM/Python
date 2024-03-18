@@ -212,3 +212,77 @@ with open('new_data.txt', 'a', encoding='utf-8') as f:
 # ● Метод tell
 # Метод tell возвращает текущую позицию в файле
 
+text = ['Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        'Consequatur debitis explicabo laboriosam sint suscipit temporibus veniam?',
+        'Accusantium alias amet fugit iste neque non odit quia saepe totam velit?', ]
+
+with open('new_data.txt', 'w', encoding='utf-8') as f:
+    print(f.tell())
+    for line in text:
+        f.write(f'{line}\n')
+        print(f.tell())
+    print(f.tell())
+print(f.tell()) # ValueError: I/O operation on closed file.
+
+
+last = before = 0
+text = ['Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        'Consequatur debitis explicabo laboriosam sint suscipit temporibus veniam?',
+        'Accusantium alias amet fugit iste neque non odit quia saepe totam velit?', ]
+
+
+# ● Метод seek
+# Метод seek позволяет изменить положение “курсора” в файле.
+# seek(offset, whence=0), где offset — смещение относительно опорной точки, whence - способ выбора опороной точки.
+
+with open('new_data.txt', 'r+', encoding='utf-8') as f:
+    while line := f.readline():
+        last, before = f.tell(), last
+    print(f'{last = }, {before = }')
+    print(f'{f.seek(before, 0) = }')
+    f.write('\n'.join(text))
+
+
+# ● Метод truncate
+# truncate(size=None) — метод изменяет размер файла
+# Если не передать значение в параметр size будет удалена часть файла от текущей позиции до конца. Метод возвращает позицию после изменения файла.
+
+last = before = 0
+with open('new_data.txt', 'r+', encoding='utf-8') as f:
+    while line := f.readline():
+        last, before = f.tell(), last
+    print(f.seek(before, 0))
+    print(f.truncate())
+
+
+size = 64
+with open('new_data.txt', 'r+', encoding='utf-8') as f:
+    print(f.truncate(size))
+
+
+
+''' Файловая система '''
+
+# Работа с каталогами
+# ● Текущий каталог
+
+import os
+from pathlib import Path
+
+print(os.getcwd()) # Функция getcwd - выводит текущую директорию
+print(Path.cwd()) # Вызываем класс Path. Так же выводит текущую директорию
+
+# Для изменения текущего каталога можно воспользоваться функцией os.chdir. Она
+# принимает на вход абсолютный или относительный путь до нового текущего каталога.
+
+print(os.getcwd())
+print(Path.cwd())
+os.chdir('../..') # Перейти на ДВЕ папки выше
+print(os.getcwd())
+print(Path.cwd())
+
+
+# ● Создание каталогов
+os.mkdir('new_os_dir')
+Path('new_path_dir').mkdir()
+
