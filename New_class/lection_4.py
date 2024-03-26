@@ -125,14 +125,14 @@ print(f'{my_list = }\t{new_list = }')
 Значения по умолчанию
 '''
 
-def quadratic_equations(a, b=0, c=0): # Пробелы между знаком равенства не прнято ставить
+def quadratic_equations(a, b=0, c=0): # Пробелы между знаком равенства не принято ставить
     d = b ** 2 - 4 * a * c
     if d > 0:
         return (-b + d ** 0.5) / (2 * a), (-b - d ** 0.5) / (2 * a)
     if d == 0:
         return -b / (2 * a)
     
-print(quadratic_equations(2, -9)) # -9 то значение b
+print(quadratic_equations(2, -9)) # -9 это значение b
 
 
 '''
