@@ -37,4 +37,3 @@ print(a_new)
 
 with open('a.json', 'w') as file:
     json.dump(a_new, file, indent = 2)
-

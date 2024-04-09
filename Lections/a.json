@@ -1,0 +1,20 @@
+[
+  {
+    "balance": -10324.54,
+    "currency": "RUB",
+    "status": "NORM",
+    "product_type": "\u0422\u0430\u0440\u0438\u0444"
+  },
+  {
+    "balance": 0,
+    "currency": "RUB",
+    "status": "CLBL",
+    "product_type": "\u0422\u0430\u0440\u0438\u0444"
+  },
+  {
+    "balance": 2345.23,
+    "currency": "RUB",
+    "status": "NORM",
+    "product_type": "\u0422\u0435\u043a\u0443\u0449\u0438\u0439 \u0441\u0447\u0435\u0442"
+  }
+]
