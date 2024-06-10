@@ -1,4 +1,6 @@
 import json
+import decimal
+import fractions
 
 a = """
 { 
@@ -30,10 +32,12 @@ a = """
     }]
 }"""
 
-a_json = json.loads(a) # я специально исказил немного добавив один уровень вложенности "а" и кавычки, чтобы можно считать эту переменную модулем json.loads()
+# a_json = json.loads(a) # я специально исказил немного добавив один уровень вложенности "а" и кавычки, чтобы можно считать эту переменную модулем json.loads()
 
-a_new = (list(filter(lambda x: x["currency"] == "RUB", a_json["a"])))
-print(a_new)
+# a_new = (list(filter(lambda x: x["currency"] == "RUB", a_json["a"])))
+# print(a_new)
 
-with open('a.json', 'w') as file:
-    json.dump(a_new, file, indent = 2)
+# with open('a.json', 'w') as file:
+#     json.dump(a_new, file, indent = 2)
+
+print(*list(range(1, 10)))
