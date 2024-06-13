@@ -94,7 +94,7 @@ my_list.remove(3) # - Ошибка. Такого числа нет
 '''
 Сортировка
 
-1. Функция sorted() - Сортирует элемнты. Может принимать не только списки но и любые последовательности в.т.ч кортеж или множества
+1. Функция sorted() - Сортирует элементы. Может принимать не только списки но и любые последовательности в.т.ч кортеж или множества
 2. Метод sort() - Сортирует только список
 
 
@@ -115,6 +115,57 @@ sort_list = sorted(my_list)
 print(my_list, sort_list, sep='\n') # [4, 8, 2, 9, 1, 7, 2] и [1, 2, 2, 4, 7, 8, 9]
 rev_list = sorted(my_list, reverse=True)
 print(my_list, rev_list, sep='\n') # [4, 8, 2, 9, 1, 7, 2] и [9, 8, 7, 4, 2, 2, 1]
+
+#################################################################
+
+fruits = ['banana', 'apple', 'cherry', 'date']
+
+
+def sorted_by_len(element: str) -> int:
+    return len(element)
+
+
+sorted_fruits = sorted(fruits, key=sorted_by_len)
+
+print(sorted_fruits)
+
+
+
+
+
+##################################################################
+
+people_first = [
+    {'name': 'Alice', 'age': 25},
+    {'name': 'Bob', 'age': 20},
+    {'name': 'Charlie', 'age': 30}
+]
+
+
+def sorted_by_age(person: dict) -> int:
+    return person['age']
+
+sorted_people = sorted(people_first, key=sorted_by_age)
+
+print(sorted_people)
+
+##################################################################
+
+people_second = [
+    {'name': 'Alice', 'age': 25},
+    {'name': 'Bob', 'age': 20},
+    {'name': 'Charlie', 'age': 30},
+    {'name': 'Diana', 'age': 30}
+]
+
+
+def sort_by_age_name(element: dict) -> tuple[int, str]:
+    return element['age'], element['name']
+
+
+sorted_people = sorted(people_second, key=sort_by_age_name)
+
+print(sorted_people)
 
 #########################################################################################################
 
@@ -168,6 +219,7 @@ print(my_list[2:7:]) # начинаем с 2-го индекса до 7, без 
 print(my_list[8:3:-1]) # От 8-го индекса, до 3-го, начинаем с конца. Вывод будет такой [16, 14 , 12, 10, 8]
 print(my_list[3::]) # Начинаем с 3 и до конца без шага
 print(my_list[:7:]) # Начинаем с начала до 7, без шага
+
 
 # ВАЖНО! Элемент который указан как Старт - включается в срез.
 # ВАЖНО! Элемент который указан как Стоп - в срез не включается.

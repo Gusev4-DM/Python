@@ -1,6 +1,7 @@
 import json
 import decimal
 import fractions
+import requests
 
 a = """
 { 
@@ -40,4 +41,29 @@ a = """
 # with open('a.json', 'w') as file:
 #     json.dump(a_new, file, indent = 2)
 
-print(*list(range(1, 10)))
+# url = 'https://api.binance.com/api/v1/time'
+
+# responce = requests.get(url, params={'serverTime': ''})
+
+# price_object = responce.json()
+
+# print(price_object)
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+transpose_matrix = []
+
+for i in range(len(matrix)):
+    transpose_row = []
+    for row in matrix:
+        transpose_row.append(row[i])
+    transpose_matrix.append(transpose_row)
+
+print(transpose_matrix)
+
+transpose_matrix = [[row[i] for row in matrix] for i in range(len(matrix))]
+print(transpose_matrix)

@@ -320,6 +320,37 @@ s_value = sorted(my_dict.items(), key=lambda x: x[1])
 print(f'{s_key = }\n{s_value = }')
 
 
+########################################################
+
+def sorted_by_len(element: str) -> int:
+    return len(element)
+
+sorted_by_len_lambda = lambda element: len(element)  # Одно и то же что и фнукция выше
+
+########################################################
+
+fruits = ['banana', 'apple', 'cherry', 'date']
+
+sorted_fruits = sorted(fruits, key=lambda element: len(element))
+
+longest_word = max(fruits, key=lambda element: len(element))
+
+########################################################
+
+# Внесение сразу нескольких словарей
+
+def add_all(*args):
+    summary = 0
+    for i in args:
+        summary += i
+    return summary
+
+
+values = [1, 2, 3, 4, 5]
+other_values = [6, 7, 8, 9, 10]
+
+add_all(*values, *other_values)  # Так тоже работает
+
 '''
 Функции “из коробки”. Они же - встроенные функции которые достуны всегда, без импортов и других подготовительных операций.
 
@@ -352,6 +383,36 @@ print(*res)
 numbers = [42, -73, 1024]
 res = tuple(filter(lambda x: x > 0, numbers))
 print(res)
+
+############################################################
+
+
+def is_even(n: int) -> bool:
+    return n % 2 == 0
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+filtered_numbers = list(filter(is_even, numbers))
+
+print(filtered_numbers)
+
+
+#############################################################
+
+people_second = [
+    {'name': 'Alice', 'age': 17},
+    {'name': 'Bob', 'age': 30},
+    {'name': 'Charlie', 'age': 19},
+    {'name': 'Diana', 'age': 40}
+]
+
+
+def is_adult(person: dict) -> bool:
+    return person['age'] >= 18
+
+filtered_people = list(filter(is_adult, people_second))
+
+print(filtered_people)
 
 
 # zip(*iterables, strict=False) — принимает несколько последовательностей и итерируется по ним параллельно.
